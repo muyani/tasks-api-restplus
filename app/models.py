@@ -4,7 +4,7 @@ from datetime import datetime
 class ProjectsModel(db.Model):
     __tablename__ = 'projects'
     id = db.Column(db.Integer,primary_key=True)
-    title = db.Column(db.String(),nullable=False,unique=True)
+    title = db.Column(db.String(),nullable=False,unique=False)
     description = db.Column(db.String(),nullable=True)
     createdDate = db.Column(db.DateTime,nullable=False,default = datetime.now)
     startDate = db.Column(db.DateTime,nullable=True)
